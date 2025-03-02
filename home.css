@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.navigation-list {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.photo {
+  width: 40vw;
+}
+
+.download_link {
+  font-size: 18px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.footer {
+  padding: 20px;
+  border-top: 1px solid black;
+}
+
+.footer-list {
+  display: flex;
+  gap: 20px;
+  font-size: 50px;
+}
+
+.footer-list-item-link {
+  color: #000;
+}
