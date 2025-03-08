@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=routine" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+      <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>04-css</title>
+  </head>
+  <body>
+    <header class="header">
+      <section class="theme-switcher">
+        <input class="theme-switcher__toggler" type="checkbox" id="theme-toggle">
+        <label class="theme-switcher__label" for="theme-toggle">
+          <span class="material-symbols-outlined">
+            routine
+          </span>
+        </label>
+      </section>
+    </header>
+    <main class="main">
+      <section class="person">
+        <div class="person__header">
+          <img class="person__header-img" src="./assets/profile - picture.png" alt="Person avatar">
+          <div>
+            <div class="person__header-content">
+              <h1 class="person__header-name">Victor Alvarado</h1>
+              <p class="person__header-description">Software Engineer</p>
+              <ul class="person__header-socials">
+                <li class="person__header-social"><a href="#"><i class="icon ion-logo-github"></i></a></li>
+                <li class="person__header-social"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+                <li class="person__header-social"><a href="#"><i class="icon ion-logo-linkedin"></i></a></li>
+                <li class="person__header-social"><a href="#"><i class="icon ion-logo-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="person__info">
+          <div class="person__info-data">
+            <p class="person__info-data-number">7</p>
+            <p class="person__info-data-discription">Years of work experience</p>
+          </div>
+          <div class="person__info-data">
+            <p class="person__info-data-number">50+</p>
+            <p class="person__info-data-discription">Completed projects</p>
+          </div>
+          <div class="person__info-data">
+            <p class="person__info-data-number">20+</p>
+            <p class="person__info-data-discription">Satisfied customers</p>
+          </div>
+        </div>
+
+        <div class="person__buttons">
+          <button class="person__button person__button--cv">Download CV <i class="icon ion-md-arrow-round-down"></i></button>
+          <button class="person__button person__button--contact">Contact me</button>
+        </div>
+      </section>
+
+        <section class="content__switcher">
+          <button class="content__switcher-button content__switcher-button--active">Portfolio</button>
+          <button class="content__switcher-button content__switcher-button">Skills</button>
+        </section>
+
+        <section class="projects">
+      <article class="projects__project">
+        <img class="projects__image" src="./assets/Group 3.png" alt="Project preview">
+      </article>
+      <article class="projects__project">
+        <img class="projects__image" src="./assets/Group 4.png" alt="Project preview">
+      </article>
+      <article class="projects__project">
+        <img class="projects__image" src="./assets/Rectangle 1.png" alt="Project preview">
+      </article>
+      <article class="projects__project">
+        <img class="projects__image" src="./assets/Group 6.png" alt="Project preview">
+      </article>
+      <article class="projects__project">
+        <img class="projects__image" src="./assets/Group 7.png" alt="Project preview">
+      </article>
+      <article class="projects__project">
+        <img class="projects__image" src="./assets/Group 8.png" alt="Project preview">
+      </article>
+    </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">© Victor Alvarado. 2022 All rights reserved</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #3D3D3D;
+  --secondary-color: #575757;
+  --accent-color: #FBD144;
+  --bg-light: #E9EBEC;
+  --bg-dark: #333;
+  --text-light: #3D3D3D;
+  --text-dark: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1440px;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  font-family: Poppins, sans-serif;
+  margin: 0 auto;
+}
+
+body.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-top: 33px;
+}
+
+.theme-switcher {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  border: 1px solid #E7E7E7;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.theme-switcher__toggler {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.theme-switcher__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.theme-switcher__label .material-symbols-outlined {
+  font-size: 40px;
+  color: var(--main-color);
+  transition: color 0.3s ease;
+}
+
+.theme-switcher__toggler:checked + .theme-switcher__label {
+  background-color: var(--bg-dark)
+}
+
+.theme-switcher__toggler:checked + .theme-switcher__label .material-symbols-outlined {
+  color: var(--text-dark);
+  content: "dark_mode";
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.person {
+  width: 100%;
+  margin-top: 65px;
+  max-width: 634px;
+}
+
+.person__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 51px;
+}
+
+.person__header-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.person__header-img {
+  width: 192px;
+  height: 192px;
+}
+
+.person__header-name {
+  font-size: 46px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.person__header-description {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--secondary-color);
+
+}
+
+.person__header-socials {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+}
+
+.person__header-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+}
+
+.icon {
+  color: #575757;
+  font-size: 24px;
+}
+
+.person__info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 31px;
+}
+
+.person__info-data {
+  text-align: center;
+  width: 107px;
+}
+.person__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 31px;
+  gap: 38px
+}
+
+.person__button {
+  height: 80px;
+  width: 290px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--main-color);
+  letter-spacing: -0.53px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.person__button--cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--accent-color);
+}
+
+.person__button--contact {
+  background-color: #fff;
+  background-color: #fff;
+  border: 1px solid var(--bg-dark);
+}
+
+.person__button--cv:hover {
+  background-color: #F9E7A5;
+  border: 2px solid var(--accent-color);
+}
+
+.person__button--contact:hover {
+  background-color: #C5D0E5;
+  color: #fff;
+}
+
+.ion-md-arrow-round-down {
+  border-bottom: 2px solid var(--main-color);
+  font-size: 20px;
+}
+
+.content__switcher {
+  display: flex;
+  justify-content: space-between;
+  max-width: 760px;
+  width: 100%;
+  height: 110px;
+  background-color: #fff;
+  align-items: center;
+  border-radius: 10px;
+  padding: 15px 23px;
+}
+
+.content__switcher-button {
+  width: 50%;
+  height: 80px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #19191B;
+  border-radius: 10px;
+ border: none;
+  background-color: #fff;
+}
+
+.content__switcher-button--active {
+  background-color: #D7D7D7;
+  border: 1px solid var(--bg-dark);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 362px);
+  gap: 20px;
+  margin-top: 65px;
+  justify-content: center;
+}
+
+.projects__project {
+  width: 362px;
+  height: 226px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.projects__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  margin: 80px 0;
+  text-align: center;
+  color: var(--secondary-color);
+  height: 33px;
+}
+
+.footer__text {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+  .theme-switcher__toggler {
+    height: 48px;
+    width: 48px;
+  }
+
+  .theme-switcher__label {
+    font-size: 24px;
+  }
+
+  .person__header {
+    flex-direction: column;
+  }
+
+  .person__header-img {
+    width: 124px;
+    height: 124px;
+  }
+
+  .person__header-content {
+    align-items: center;
+  }
+
+  .person__header-socials {
+    margin-top: 20px;
+    gap: 26px;
+  }
+
+  .person__header-social {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 30px;
+  }
+
+  .person__header-name {
+    font-size: 32px;
+  }
+
+  .person__header-description {
+    font-size: 14px;
+  }
+
+  .person__info {
+    padding: 0;
+  }
+
+  .person__info-data {
+    font-size: 14px;
+    justify-content: center;
+  }
+
+  .person__info-data-discription {
+    width: 102px;
+  }
+
+  .person__button {
+    height: 44px;
+    width: 158px;
+    font-size: 12px;
+  }
+
+  .ion-md-arrow-round-down {
+    font-size: 12px;
+  }
+
+  .content__switcher {
+    height: 84px;
+    padding: 10px 20px;
+  }
+
+  .content__switcher-button {
+    height: 50px;
+    font-size: 14px;
+  }
+
+
+  .projects {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .projects__project {
+    width: 340px;
+    height: 210px;
+  }
+
+  .footer__text {
+    font-size: 14px;
+    margin: 30px 0px;
+    height: 21px;
+  }
+}
+
