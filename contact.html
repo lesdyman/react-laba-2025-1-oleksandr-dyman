@@ -14,10 +14,10 @@
       <nav>
         <ul class="navigation-list">
           <li>
-            <a href="/home.html">Home</a>
+            <a href="./home.html">Home</a>
           </li>
           <li>
-            <a href="/contact.html">
+            <a href="./contact.html">
               Contact
             </a>
           </li>
@@ -28,19 +28,19 @@
     <main class="main">
       <h1>Contact Me</h1>
 
-      <!-- Додаємо ID для форми -->
       <form class="form" id="contact-form" inputmode="contact-form" method="post">
         <section>
           <div class="name">
             <label for="full-name">Full Name*</label>
-
+            <div id="full-name">
             <input type="text" placeholder="Your first name" id="first-name" name="first-name" required>
             <input type="text" placeholder="Your last name" id="last-name" name="last-name" required>
+          </div>
           </div>
         </section>
 
         <div class="phone">
-          <label for="phone number">Phone Number*</label>
+          <label for="phone">Phone Number*</label>
           <input type="tel" id="phone" placeholder="Your phone..." name="phone"
             pattern="\+?\d{1,4}[\s\-]?\(?\d{1,4}\)?[\s\-]?\d{1,4}[\s\-]?\d{1,4}" required>
         </div>
