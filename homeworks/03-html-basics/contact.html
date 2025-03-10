@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contacts.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+    <script src="./form-handler.js" defer></script>
+    <title>Contact</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul class="navigation-list">
+          <li>
+            <a href="./home.html">Home</a>
+          </li>
+          <li>
+            <a href="./contact.html">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1>Contact Me</h1>
+
+      <form class="form" id="contact-form" inputmode="contact-form" method="post">
+        <section>
+          <div class="full-name">
+            <label for="full-name">Full Name*</label>
+            <input type="text" placeholder="Your first name" id="first-name" name="first-name" required>
+            <input type="text" placeholder="Your last name" id="last-name" name="last-name" required>
+          </div>
+        </section>
+
+        <div class="phone">
+          <label for="phone">Phone Number*</label>
+          <input type="tel" id="phone" placeholder="Your phone..." name="phone"
+            pattern="\+?\d{1,4}[\s\-]?\(?\d{1,4}\)?[\s\-]?\d{1,4}[\s\-]?\d{1,4}" required>
+        </div>
+
+        <section>
+          <div class="country">
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+              <option value="">Select your country</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="Poland">Poland</option>
+              <option value="USA">USA</option>
+              <option value="Canada">Canada</option>
+              <option value="UK">UK</option>
+              <option value="Australia">Australia</option>
+            </select>
+          </div>
+        </section>
+
+        <section>
+          <textarea class="message-input" id="message" placeholder="Your message..." name="message" rows="5" required></textarea>
+        </section>
+
+        <button class="submit-button" type="submit">Submit</button>
+      </form>
+
+      <div id="result"></div>
+    </main>
+
+    <footer class="footer">
+      <ul class="footer-list">
+        <li class="footer-list-item"><a class="footer-list-item-link" href="#"><ion-icon
+              name="logo-facebook"></ion-icon></a></li>
+        <li class="footer-list-item"><a class="footer-list-item-link" href="#"><ion-icon
+              name="logo-instagram"></ion-icon></a></li>
+        <li class="footer-list-item"><a class="footer-list-item-link" href="#"><ion-icon
+              name="logo-linkedin"></ion-icon></a></li>
+        <li class="footer-list-item"><a class="footer-list-item-link" href="#"><ion-icon
+              name="logo-twitter"></ion-icon></a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
